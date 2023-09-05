@@ -14,8 +14,9 @@ public class Snaket_Ladder {
 
         System.out.println("!!! The player will start from 0 position !!!");
 
+        int count =0;
 
-      while (user1<=target){
+      for (int i =1;i<=100;i++){
           if (user1 == target) {
               break;
           }
@@ -41,7 +42,6 @@ public class Snaket_Ladder {
                     break;
                 }
                 System.out.println("You have got Snake");
-                user1 = user1 - deice;
                 if (user1 > target) {
                     user1 = user1;
                     break;
@@ -50,6 +50,7 @@ public class Snaket_Ladder {
                     user1 = user1;
                     System.out.println("Current position of user is: " + user1);
                 } else {
+                    user1 = user1 - deice;
                     System.out.println("Current position of user is: " + user1);
                 }
             }else {
@@ -61,6 +62,9 @@ public class Snaket_Ladder {
         }
       if (user1==target){
           System.out.println("\n!!! You Have Won !!!");
+          System.out.println("Count taken to Win: "+count);
+      }else {
+          System.out.println("!!! Game is Over !!!");
       }
 
     }
